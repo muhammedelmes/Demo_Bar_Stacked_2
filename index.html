@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bar_Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        text-align: left;
+        background: #e5d6bf;
+      }
+
+      /* Container for chart, title, description */
+      .chart-container {
+        max-width: 850px;
+        background-color: #e5d6bf; /* default background */
+        padding: 20px;
+        border-radius: 0;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+      }
+
+      .chart-container h1 {
+        margin: 0;
+        font-size: 24px;
+        color: #1d2656;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .chart-container p {
+        margin: 10px 0 30px 0;
+        color: #1d2656;
+        font-size: 14px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      #chart > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .chart-aspect-ratio {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 aspect ratio */
+        overflow: hidden;
+      }
+
+      .chart-aspect-ratio #chart {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      /* Footer row for data source & logo */
+      .chart-footer {
+        display: flex;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+        font-size: 12px;
+        color: #1d2656;
+      }
+
+      .chart-footer img {
+        height: 20px; /* adjust logo size */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Container for title + description + chart -->
+    <div class="chart-container" id="chartBox">
+      <h1>Top 5 Sectors Driving Libya’s Public Expenditure</h1>
+      <p>
+        This chart shows Libya’s annual government expenditure compared to total
+        revenues. The Top 5 sectors.
+      </p>
+      <div class="chart-aspect-ratio">
+        <div id="chart"></div>
+      </div>
+
+      <div id="chart"></div>
+
+      <!-- Footer with data source and logo -->
+      <div class="chart-footer">
+        <div class="data-source">
+          Data source: Central Bank of Libya, 2025 (Jan–Jul): Partial data,
+          annualized would be higher.
+        </div>
+        <div class="logo">
+          <img src="logo.png" alt="Website Logo" />
+        </div>
+      </div>
+    </div>
+
+    <!-- External JS -->
+    <script src="chart.js"></script>
+  </body>
+</html>
